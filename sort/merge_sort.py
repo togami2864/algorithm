@@ -6,6 +6,7 @@ def merge_sort(arr):
     right = arr[center:]
 
     merge_sort(left)
+    print(left)
     merge_sort(right)
 
     i = j = k = 0
@@ -33,7 +34,8 @@ def merge_sort(arr):
 
 if __name__ == "__main__":
     import random
-    arr = [random.randint(0, 1000) for _ in range(10)]
+    arr = [5, 4, 1, 8, 7, 3, 2, 7]
+    # arr = [random.randint(0, 1000) for _ in range(10)]
     arr = merge_sort(arr)
     for i in arr:
         print(i)
